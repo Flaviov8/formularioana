@@ -11,6 +11,8 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('ana5.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixa a imagem de fundo para evitar rolagem */
 }
 
 .form-container {
@@ -74,6 +76,11 @@ button:hover {
 
 /* Media Queries para responsividade */
 @media (max-width: 600px) {
+    body {
+        background-size: contain; /* Ajusta a imagem para caber na tela */
+        background-position: top center; /* Posiciona a imagem no topo */
+    }
+
     .form-container {
         padding: 15px;
     }
@@ -94,6 +101,11 @@ button:hover {
 }
 
 @media (max-width: 400px) {
+    body {
+        background-size: contain; /* Ajusta a imagem para caber na tela */
+        background-position: top center; /* Posiciona a imagem no topo */
+    }
+
     .form-container {
         padding: 10px;
     }
