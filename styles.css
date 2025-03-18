@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('ana5.png'); /* Adicione uma imagem de fundo para ver o efeito da transparência */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('ana5.png');
     background-size: cover;
     background-position: center;
 }
