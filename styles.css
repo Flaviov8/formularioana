@@ -52,7 +52,15 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo dos campos com 90% de opacidade */
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: box-shadow 0.3s ease; /* Adiciona uma transição suave para a sombra */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Sombra azul quando o input está em foco */
+    outline: none; /* Remove o contorno padrão do navegador */
 }
 
 textarea {
@@ -62,16 +70,30 @@ textarea {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #0e4e79;
+    background-color: #264d5f;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
 }
 
 button:hover {
-    background-color: #1549a8;
+    background-color: #17456b;
+    animation: pulse 1s infinite; /* Aplica a animação "pulse" ao botão quando o mouse está sobre ele */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Media Queries para responsividade */
